@@ -50,8 +50,10 @@ class App {
         // Save the urls of each basemap thumbnail
         const basemaps = {
             default: "images/basemaps/default.png",
-            aerial : "images/basemaps/aerial.png",
-            labels : "images/basemaps/labels.png",
+            // aerial : "images/basemaps/aerial.png",
+            // labels : "images/basemaps/labels.png",
+            toner : "images/basemaps/toner.png",
+            terrain : "images/basemaps/terrain.png",
         };
 
         // Cache the basemaps thumbnails
@@ -329,25 +331,49 @@ class App {
             source : new ol.source.OSM()
         }));
 
-        // Load the Bing aerial basemap
-        this._basemaps.push(
-            new ol.layer.Tile({
-                title  : "aerial",
-                type   : "base",
-                visible: false,
-                source : new ol.source.BingMaps({ key: settings.bingKey, imagerySet: 'Aerial' })
-            })
-        );
+        // Load the Stamen terrain map
+        this._basemaps.push(new ol.layer.Tile({
+            title  : "terrain",
+            type   : "base",
+            visible: false,
+            source : new ol.source.Stamen({layer:'terrain'})
+        }));
 
-        // Load the Bing aerial with labels basemap
-        this._basemaps.push(
-            new ol.layer.Tile({
-                title  : "labels",
-                type   : "base",
-                visible: false,
-                source : new ol.source.BingMaps({ key: settings.bingKey, imagerySet: "AerialWithLabels" })
-            })
-        );
+        // Load the Stamen toner map
+        this._basemaps.push(new ol.layer.Tile({
+            title  : "toner",
+            type   : "base",
+            visible: false,
+            source : new ol.source.Stamen({layer:'toner'})
+        }));
+
+        // // Load the OSM basemap
+        // this._basemaps.push(new ol.layer.Tile({
+        //     title  : "default",
+        //     type   : "base",
+        //     visible: true,
+        //     source : new ol.source.OSM()
+        // }));
+
+        // // Load the Bing aerial basemap
+        // this._basemaps.push(
+        //     new ol.layer.Tile({
+        //         title  : "aerial",
+        //         type   : "base",
+        //         visible: false,
+        //         source : new ol.source.BingMaps({ key: settings.bingKey, imagerySet: 'Aerial' })
+        //     })
+        // );
+
+        // // Load the Bing aerial with labels basemap
+        // this._basemaps.push(
+        //     new ol.layer.Tile({
+        //         title  : "labels",
+        //         type   : "base",
+        //         visible: false,
+        //         source : new ol.source.BingMaps({ key: settings.bingKey, imagerySet: "AerialWithLabels" })
+        //     })
+        // );
 
     }
 
