@@ -191,7 +191,7 @@ const metadata = {
         licence    : "IODL"
     },
 	
-	susceptibility: {
+    susceptibility: {
         description: "Landslide Susceptibility Map produced by Random Forest",
         download   : "",
         date       : "2020",
