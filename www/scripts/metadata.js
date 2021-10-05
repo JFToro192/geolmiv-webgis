@@ -167,4 +167,36 @@ const metadata = {
         licence    : "IODL"
     },
 
+    dtm: {
+        description: "This layer is composed by the collection of curves that join points having the same altitude.",
+        download   : "",
+        date       : "2008",
+        attribution: "Regione Lombardia",
+        licence    : "IODL"
+    },
+
+    hillshade: {
+        description: "This layer is composed by the collection of curves that join points having the same altitude.",
+        download   : "",
+        date       : "2008",
+        attribution: "Regione Lombardia",
+        licence    : "IODL"
+    },
+
+    slope: {
+        description: "This layer is composed by the collection of curves that join points having the same altitude.",
+        download   : "",
+        date       : "2008",
+        attribution: "Regione Lombardia",
+        licence    : "IODL"
+    },
+
+    // elevation: {
+    //     description: "This layer is composed by the collection of curves that join points having the same altitude.",
+    //     download   : "",
+    //     date       : "2008",
+    //     attribution: "Regione Lombardia",
+    //     licence    : "IODL"
+    // },
+
 };
