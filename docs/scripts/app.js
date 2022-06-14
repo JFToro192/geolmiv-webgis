@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 let app;
 
@@ -392,9 +392,9 @@ class App {
         // Configure the WMS request
         const source = new ol.source.ImageWMS({
             url        : settings.wmsUrl,
-            params     : { "LAYERS": `mhyconos:${layerName}` },
+            params     : { "LAYERS": `geonode:${layerName}` },
             serverType : "geoserver",
-            crossOrigin: "Anonymous"
+            // crossOrigin: "Anonymous"
         });
 
         // Create the image
