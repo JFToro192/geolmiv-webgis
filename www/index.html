@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -574,3 +575,595 @@
 </body>
 
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <!-- OpenLayers -->
+    <link rel="stylesheet" href="styles/0-lib/ol.css" type="text/css"> <!-- v. 5.3.0 -->
+
+    <!-- Roboto font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+
+    <!-- Material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles/index.css" type="text/css">
+
+    <title>MHYCONOS</title>
+
+</head>
+
+<body>
+
+
+<!-- Metadata window -->
+<div style="display:none;" id="metadata-window">
+
+    <div class="metadata-top-bar">
+
+        <div class="metadata-tile"></div>
+
+        <div class="metadata-close"><i class="material-icons">close</i></div>
+
+    </div>
+
+    <div class="metadata-body">
+
+        <div class="metadata-description"></div>
+
+        <div class="metadata-legend">
+
+            <div class="metadata-legend-title">Legend</div>
+
+            <div id="metadata-legend-img"></div>
+
+        </div>
+
+        <div class="metadata-info">
+
+            <div class="metadata-info-title">Information</div>
+
+            <div id="metadata-download" class="metadata-info-wrapper">
+
+                <div class="info-name">Download</div>
+
+                <div class="info-content">
+
+                    <a href="http://www.geoportale.regione.lombardia.it/en/metadati?p_p_id=PublishedMetadata_WAR_geoportalemetadataportlet&p_p_lifecycle=0&p_p_state=maximized&p_p_state=view&_PublishedMetadata_WAR_geoportalemetadataportlet_view=editPublishedMetadata&_PublishedMetadata_WAR_geoportalemetadataportlet_uuid=%7B1CE0E71B-6451-4B5D-8E4D-BC0FF6E0A46F%7D&_PublishedMetadata_WAR_geoportalemetadataportlet_editType=view&_PublishedMetadata_WAR_geoportalemetadataportlet_fromAsset=true&rid=local"
+                       target="_blank">Download link</a>
+
+                </div>
+
+            </div>
+
+            <div id="metadata-date" class="metadata-info-wrapper">
+
+                <div class="info-name">Collection date</div>
+
+                <div class="info-content"></div>
+
+            </div>
+
+            <div id="metadata-attribution" class="metadata-info-wrapper">
+
+                <div class="info-name">Attribution</div>
+
+                <div class="info-content"></div>
+
+            </div>
+
+            <div id="metadata-licence" class="metadata-info-wrapper">
+
+                <div class="info-name">Licence</div>
+
+                <div class="info-content"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Layers panel -->
+<div id="layers-panel-trigger"><i class="material-icons">layers</i></div>
+
+<div id="layers-panel" class="open">
+
+    <div class="layers-panel-header">
+
+        <div class="layers-panel-title">Layers</div>
+        <div id="layers-panel-close" class="layers-panel-close"><i class="material-icons">close</i></div>
+
+    </div>
+
+    <div class="layers-container">
+
+        <!-- Structures group -->
+        <div class="layer-group-header">
+
+            <div class="group-title">Structures</div>
+            <div class="group-toggle"><i class="material-icons">arrow_forward_ios</i></div>
+
+        </div>
+
+        <div class="layer-group-content">
+
+            <div class="layer" data-layer="corpo_edificato" data-maxres="Infinity"  data-loaded="false">
+
+                <div class="layer-name">Buildings</div>
+
+                <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+                <div class="layer-visibility layer-icon" data-visible="false">
+                    <i class="material-icons">visibility_off</i>
+                </div>
+
+            </div>
+
+            <div class="layer" data-layer="localita_abitata" data-maxres="19.3" data-loaded="false">
+
+                <div class="layer-name">Populated areas</div>
+
+                <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+                <div class="layer-visibility layer-icon" data-visible="false">
+                    <i class="material-icons">visibility_off</i>
+                </div>
+
+            </div>
+
+            <div class="layer" data-layer="luogo_territoriale" data-maxres="Infinity"  data-loaded="false">
+
+                <div class="layer-name">Spatial locations</div>
+
+                <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+                <div class="layer-visibility layer-icon" data-visible="false">
+                    <i class="material-icons">visibility_off</i>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Roads group -->
+        <div class="layer-group-header">
+
+            <div class="group-title">Roads</div>
+            <div class="group-toggle"><i class="material-icons">arrow_forward_ios</i></div>
+
+        </div>
+
+        <div class="layer-group-content">
+
+            <div class="layer" data-layer="elementi_stradali" data-maxres="Infinity"  data-loaded="false">
+
+                <div class="layer-name">Road elements</div>
+
+                <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+                <div class="layer-visibility layer-icon" data-visible="false">
+                    <i class="material-icons">visibility_off</i>
+                </div>
+
+            </div>
+
+            <div class="layer" data-layer="area_circolazione_veicolare" data-maxres="Infinity"  data-loaded="false">
+
+                <div class="layer-name">Vehicular circulation areas</div>
+
+                <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+                <div class="layer-visibility layer-icon" data-visible="false">
+                    <i class="material-icons">visibility_off</i>
+                </div>
+
+            </div>
+
+            <div class="layer" data-layer="sentieri" data-maxres="Infinity"  data-loaded="false">
+
+                <div class="layer-name">Paths</div>
+
+                <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+                <div class="layer-visibility layer-icon" data-visible="false">
+                    <i class="material-icons">visibility_off</i>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Water group -->
+        <div class="layer-group-header">
+
+            <div class="group-title">Water</div>
+            <div class="group-toggle"><i class="material-icons">arrow_forward_ios</i></div>
+
+        </div>
+
+        <div class="layer-group-content">
+
+            <div class="layer" data-layer="specchio_acqua" data-maxres="Infinity" data-loaded="false">
+
+                <div class="layer-name">Water bodies</div>
+
+                <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+                <div class="layer-visibility layer-icon" data-visible="false">
+                    <i class="material-icons">visibility_off</i>
+                </div>
+
+            </div>
+
+            <div class="layer" data-layer="invaso_artificiale" data-maxres="Infinity" data-loaded="false">
+
+                <div class="layer-name">Artificial lake</div>
+
+                <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+                <div class="layer-visibility layer-icon" data-visible="false">
+                    <i class="material-icons">visibility_off</i>
+                </div>
+
+            </div>
+
+            <div class="layer" data-layer="area_bagnata_corso_acqua" data-maxres="Infinity" data-loaded="false">
+
+                <div class="layer-name">Streams wet areas</div>
+
+                <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+                <div class="layer-visibility layer-icon" data-visible="false">
+                    <i class="material-icons">visibility_off</i>
+                </div>
+
+            </div>
+
+            <div class="layer" data-layer="bacini_idrografici" data-maxres="Infinity" data-loaded="false">
+
+                <div class="layer-name">Drainage basins</div>
+
+                <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+                <div class="layer-visibility layer-icon" data-visible="false">
+                    <i class="material-icons">visibility_off</i>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Contour map -->
+        <div class="layer single-layer" data-layer="isoipse" data-maxres="Infinity"  data-loaded="false">
+
+            <div class="layer-name">Contour map</div>
+
+            <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+            <div class="layer-visibility layer-icon" data-visible="false">
+                <i class="material-icons">visibility_off</i>
+            </div>
+
+        </div>
+
+
+        <!-- Landslides collection group -->
+        <div class="layer-group-header">
+
+            <div class="group-title">Landslides collection</div>
+            <div class="group-toggle"><i class="material-icons">arrow_forward_ios</i></div>
+
+        </div>
+
+        <div class="layer-group-content">
+
+            <div class="layer" data-layer="punti_storici" data-maxres="Infinity" data-loaded="false">
+
+                <div class="layer-name">Historic points</div>
+
+                <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+                <div class="layer-visibility layer-icon" data-visible="false">
+                    <i class="material-icons">visibility_off</i>
+                </div>
+
+            </div>
+
+            <div class="layer" data-layer="frane_poligonali" data-maxres="Infinity"  data-loaded="false">
+
+                <div class="layer-name">Polygonal landslides</div>
+
+                <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+                <div class="layer-visibility layer-icon" data-visible="false">
+                    <i class="material-icons">visibility_off</i>
+                </div>
+
+            </div>
+
+            <div class="layer" data-layer="frane_lineari" data-maxres="Infinity"  data-loaded="false">
+
+                <div class="layer-name">Linear landslides</div>
+
+                <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+                <div class="layer-visibility layer-icon" data-visible="false">
+                    <i class="material-icons">visibility_off</i>
+                </div>
+
+            </div>
+
+            <div class="layer" data-layer="aree_franosita_diffusa" data-maxres="Infinity" data-loaded="false">
+
+                <div class="layer-name">Widespread landslides areas</div>
+
+                <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+                <div class="layer-visibility layer-icon" data-visible="false">
+                    <i class="material-icons">visibility_off</i>
+                </div>
+
+            </div>
+			
+	    <div class="layer" data-layer="susceptibility" data-maxres="Infinity" data-loaded="false">
+
+                <div class="layer-name">Landslide susceptibility map</div>
+
+                <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+                <div class="layer-visibility layer-icon" data-visible="false">
+                    <i class="material-icons">visibility_off</i>
+                </div>
+
+            </div>
+			
+			
+
+        </div>
+
+
+        <!-- Val Tartano -->
+        <div class="layer single-layer" data-layer="val_tartano" data-maxres="Infinity" data-loaded="false">
+
+            <div class="layer-name">Tartano basin</div>
+
+            <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+            <div id="tartano-visibility" class="layer-visibility layer-icon" data-visible="false">
+                <i class="material-icons">visibility_off</i>
+            </div>
+
+        </div>
+
+
+        <!-- Municipalities -->
+        <div class="layer single-layer" data-layer="comuni" data-maxres="Infinity" data-loaded="false">
+
+            <div class="layer-name">Municipalities</div>
+
+            <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+            <div class="layer-visibility layer-icon" data-visible="false">
+                <i class="material-icons">visibility_off</i>
+            </div>
+
+        </div>
+
+
+        <!-- Land use -->
+        <div class="layer single-layer" data-layer="dusaf" data-maxres="Infinity"  data-loaded="false">
+
+            <div class="layer-name">Land use and cover</div>
+
+            <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+            <div class="layer-visibility layer-icon" data-visible="false">
+                <i class="material-icons">visibility_off</i>
+            </div>
+
+        </div>
+
+
+        <!-- Geological map group -->
+        <div class="layer-group-header">
+
+            <div class="group-title">Geological map</div>
+            <div class="group-toggle"><i class="material-icons">arrow_forward_ios</i></div>
+
+        </div>
+
+        <div class="layer-group-content">
+
+            <div class="layer" data-layer="faglie" data-maxres="Infinity"  data-loaded="false">
+
+                <div class="layer-name">Fault lines</div>
+
+                <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+                <div class="layer-visibility layer-icon" data-visible="false">
+                    <i class="material-icons">visibility_off</i>
+                </div>
+
+            </div>
+
+            <div class="layer" data-layer="geologia" data-maxres="Infinity"  data-loaded="false">
+
+                <div class="layer-name">Geology</div>
+
+                <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+                <div class="layer-visibility layer-icon" data-visible="false">
+                    <i class="material-icons">visibility_off</i>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- DTM group -->
+        <div class="layer-group-header">
+
+            <div class="group-title">Terrain Models</div>
+            <div class="group-toggle"><i class="material-icons">arrow_forward_ios</i></div>
+
+        </div>
+
+        <div class="layer-group-content">
+
+            <div class="layer" data-layer="dtm" data-maxres="Infinity"  data-loaded="false">
+
+                <div class="layer-name">DTM</div>
+
+                <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+                <div class="layer-visibility layer-icon" data-visible="false">
+                    <i class="material-icons">visibility_off</i>
+                </div>
+
+            </div>
+
+            <div class="layer" data-layer="hillshade" data-maxres="Infinity"  data-loaded="false">
+
+                <div class="layer-name">Hillshade</div>
+
+                <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+                <div class="layer-visibility layer-icon" data-visible="false">
+                    <i class="material-icons">visibility_off</i>
+                </div>
+
+            </div>
+
+            <div class="layer" data-layer="slope" data-maxres="Infinity"  data-loaded="false">
+
+                <div class="layer-name">Slope</div>
+
+                <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+                <div class="layer-visibility layer-icon" data-visible="false">
+                    <i class="material-icons">visibility_off</i>
+                </div>
+
+            </div>
+
+        </div>
+        
+        <!-- Sample group -->
+            <!-- Modify the data-layer attribute to match the name of the layer in GeoServer -->
+        <!-- <div class="layer-group-header">
+
+            <div class="group-title">Test Group</div>
+            <div class="group-toggle"><i class="material-icons">arrow_forward_ios</i></div>
+
+        </div>
+
+        <div class="layer-group-content">
+            <div class="layer" data-layer="elevation" data-maxres="Infinity"  data-loaded="false">
+
+                <div class="layer-name">Test subgroup</div>
+
+                <div class="layer-info layer-icon"><i class="material-icons-outlined">info</i></div>
+
+                <div class="layer-visibility layer-icon" data-visible="false">
+                    <i class="material-icons">visibility_off</i>
+                </div>
+
+            </div>
+
+        </div> -->
+    </div>
+
+</div>
+
+
+<!-- Basemaps -->
+<div id="basemaps">
+
+    <!-- Trigger -->
+    <div id="basemaps-trigger" class="basemap-wrapper">
+
+        <div class="basemap-name">Basemap</div>
+
+    </div>
+
+    <!-- OpenStreetMaps -->
+    <div id="basemap-default" class="basemap-wrapper basemap-option basemap-selected">
+
+        <div class="basemap-name">Default</div>
+
+    </div>
+
+    <!-- Stamen Toner -->
+    <div id="basemap-toner" class="basemap-wrapper basemap-option">
+
+        <div class="basemap-name">Toner</div>
+
+    </div>
+
+    <!-- Bing Terrain -->
+    <div id="basemap-terrain" class="basemap-wrapper basemap-option">
+
+        <div class="basemap-name">Terrain</div>
+
+    </div>
+
+    <!-- Bing aerial with labels -->
+    <!-- <div id="basemap-aerial" class="basemap-wrapper basemap-option">
+
+        <div class="basemap-name">Aerial</div>
+
+    </div> -->
+
+    <!-- Bing aerial -->
+    <!-- <div id="basemap-labels" class="basemap-wrapper basemap-option">
+
+        <div class="basemap-name">Labels</div>
+
+    </div> -->
+
+    <!-- No basemaps -->
+    <div id="basemap-none" class="basemap-wrapper basemap-option">
+
+        <div class="basemap-name">None</div>
+
+    </div>
+
+</div>
+
+
+<!-- Map view -->
+<div id="map"></div>
+
+
+<!-- jQuery -->
+<script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/0-lib/jquery-ui.min.js"></script> <!-- v. 1.12.1 -->
+
+<!-- OpenLayers -->
+<script type="text/javascript" src="scripts/0-lib/ol.js"></script> <!-- v. 5.3.0 -->
+
+<!-- Main js -->
+<script type="text/javascript" src="scripts/settings.js"></script>
+<script type="text/javascript" src="scripts/metadata.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+
+</body>
+
+</html>
+>>>>>>> f5ae7b7b63b0c3a360afc6ae0c8e2451429f5bfd

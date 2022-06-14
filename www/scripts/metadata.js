@@ -190,6 +190,14 @@ const metadata = {
         attribution: "Regione Lombardia",
         licence    : "IODL"
     },
+	
+    susceptibility: {
+        description: "Landslide Susceptibility Map produced by Random Forest",
+        download   : "",
+        date       : "2020",
+        attribution: "Regione Lombardia",
+        licence    : "IODL"
+    },
 
     // elevation: {
     //     description: "This layer is composed by the collection of curves that join points having the same altitude.",

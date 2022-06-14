@@ -1,17 +1,17 @@
-# Project MHYCONOS WebGIS
+# Project GEOLMIV WebGIS
 
-A responsive and interactive WebGIS built to show the data regarding **project MHYCONOS**.   
+A responsive and interactive WebGIS built to show the data regarding **project GEOLMIV**.   
 
-It is compliant to [OGC standards](https://www.opengeospatial.org/standards) and it retrieves the data from
+It is compliant with [OGC standards](https://www.opengeospatial.org/standards) and it retrieves the data from
 [GeoServer](http://geoserver.org/) through a series of *WMS* calls. 
 
-<img src="https://github.com/epessina/mhyconos-webgis/blob/master/screen/webgis.png" width="800" alt="Demo">
+<img src="https://github.com/JFToro192/mhyconos-webgis/blob/master/screen/webgis.png" width="800" alt="Demo">
 
 
 ### Features
 
 * Fully interactive map view.
-* Choose among four different basemaps.
+* Choose among four different base maps.
 * Toggle layers visibility.
 * Visualize the metadata of each layer in a draggable window.
 
@@ -22,7 +22,6 @@ It is compliant to [OGC standards](https://www.opengeospatial.org/standards) and
 - [jQuery UI](https://jqueryui.com/)
 - [OpenLayers](https://openlayers.org/)
 
+### Acknowledgements
 
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/) © [Edoardo Pessina](edoardo2.pessina@mail.polimi.it)
+GEOLMIV webGIS is an adaption and development on the GitHub repository for the Mhyconos WebGIS project developed by [Edoardo Pessina](https://github.com/epessina/mhyconos-webgis).
