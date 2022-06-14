@@ -239,21 +239,21 @@ p {
 }
 
 .ol-zoom button {
-  background: #01A0C4;
+  background: #4b62a0;
 }
 
 .ol-zoom button:hover {
-  background: #067C98;
+  background: #312258;
 }
 
 .ol-zoom button:focus {
-  background: #067C98;
+  background: #312258;
 }
 
 #layers-panel-trigger {
   width: 50px;
   height: 40px;
-  background: #01A0C4;
+  background: #4b62a0;
   position: absolute;
   top: 50px;
   left: 0;
@@ -301,7 +301,7 @@ p {
   top: 0;
   left: 0;
   z-index: 2;
-  background-color: #01A0C4;
+  background-color: #4b62a0;
   -webkit-box-shadow: 3px 0 5px 0 rgba(0, 0, 0, 0.36);
           box-shadow: 3px 0 5px 0 rgba(0, 0, 0, 0.36);
   -webkit-transform: translateX(-405px);
@@ -345,7 +345,7 @@ p {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 20px 0 30px;
-  background-color: #067C98;
+  background-color: #312258;
   color: #FFFFFF;
   display: -moz-flex;
   display: -ms-flex;
@@ -422,7 +422,7 @@ p {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 20px 0 30px;
-  background-color: #01A0C4;
+  background-color: #4b62a0;
   color: #FFFFFF;
   cursor: pointer;
   border-bottom: 1px solid #FFFFFF;
@@ -494,7 +494,7 @@ p {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 20px 0 30px;
-  background-color: #01B2D7;
+  background-color: #abbff7;
   color: #FFFFFF;
   border-bottom: 1px solid #FFFFFF;
 }
@@ -505,7 +505,7 @@ p {
 }
 
 #layers-panel .layers-container .layer.single-layer {
-  background-color: #01A0C4;
+  background-color: #4b62a0;
 }
 
 #layers-panel .layers-container .layer .layer-name {
@@ -552,11 +552,11 @@ p {
 }
 
 .basemap-wrapper.basemap-selected {
-  border: 3px solid #01B2D7;
+  border: 3px solid #abbff7;
 }
 
 .basemap-wrapper:hover {
-  border: 3px solid #01B2D7;
+  border: 3px solid #abbff7;
 }
 
 .basemap-wrapper .basemap-name {
@@ -639,7 +639,7 @@ p {
       -ms-flex-align: center;
           align-items: center;
   color: #FFFFFF;
-  background-color: #01B2D7;
+  background-color: #abbff7;
   border-bottom: 1px solid #EBEBEB;
   padding-left: 16px;
   border-radius: 5px 5px 0 0;
@@ -759,5 +759,5 @@ p {
 
 #metadata-window .metadata-body .metadata-info .metadata-info-wrapper .info-content a {
   text-decoration: underline;
-  color: #01A0C4;
+  color: #4b62a0;
 }
